@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  notebook:
+    build:
+      context: ./docker
+    container_name: tpot
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ./notebook:/home/jovyan/work/notebook
+      - ./data:/home/jovyan/work/data
+      - ./submit:/home/jovyan/work/submit
+    command: start-notebook.sh --NotebookApp.token=''
