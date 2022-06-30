@@ -10,6 +10,6 @@
 docker-compose up
 ```
 
-2. `localhose:8888`にアクセス
+2. `localhost:8888`にアクセス
 
 3. `/work/notebook/tpot.ipynb`を開き、セルを順番に実行
